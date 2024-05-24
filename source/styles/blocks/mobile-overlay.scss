@@ -1,0 +1,28 @@
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 29px;
+  line-height: 40px;
+  font-weight: 700;
+  background-color: $basic-white;
+  color: $text-color;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: unset;
+    left: unset;
+    top: unset;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}

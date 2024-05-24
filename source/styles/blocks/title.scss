@@ -1,0 +1,26 @@
+.title {
+  font-family: $primary-font;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+  &--sm {
+    font-size: 18px;
+  }
+
+  &--md {
+    font-size: 32px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 47px;
+    }
+  }
+
+  &--lg {
+    font-size: 36px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 47px;
+    }
+  }
+}

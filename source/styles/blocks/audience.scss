@@ -1,0 +1,20 @@
+.audience {
+  padding-left: 20px;
+  margin-bottom: $section-mobile-margin;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 125px;
+    margin-bottom: $section-desktop-margin;
+  }
+}
+
+.audience__title {
+  line-height: 36px;
+  margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    line-height: 50px;
+    margin-bottom: 40px;
+    width: 60%;
+  }
+}

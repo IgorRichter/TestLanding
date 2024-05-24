@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Умножай Урожай</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="/font/manrope/Manrope-Regular.woff2" as="font">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__wrapper">
+          <div class="main-header__wrapper-block">
+            <a class="main-header__logo link" href="index.html">
+              <div class="main-header__logo-img">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/main-logo.svg" width="218" height="32">
+                  <img src="images/main-logo.svg" width="158" height="22" alt="Логотип УмножайУрожай">
+                </picture>
+              </div>
+            </a>
+            <button class="main-header__toogle button-toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          </div>
+          <div class="mobile-overlay">
+            <nav class="main-nav">
+              <ul class="main-nav__list list">
+                <li class="main-nav__item ">
+                  <a class="main-nav__link link" href="#cards">О сервисе</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link link" href="#main-description">Точное земледелие</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link link" href="#possibilities">Возможности</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link link" href="#tariff">Цены</a>
+                </li>
+              </ul>
+              <ul class="main-nav__user-list list">
+                <li class="main-nav__item">
+                  <a class="main-nav__user-link main-nav__user-link--secondary link" href="#">Войти</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__user-link main-nav__user-link--primory link" href="#">Регистрация</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+    <main class="main-index">
+      <h1 class="visually-hidden">Умножай Урожай</h1>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="images/Device_hero--desktop@1x.webp 1x, images/Device_hero--desktop@2x.webp 2x" width="908" height="521">
+                <source type="image/webp" srcset="images/Device_hero--mobile@1x.webp 1x, images/Device_hero--mobile@2x.webp 2x" width="375" height="214">
+                <source type="image/png" media="(min-width: 1440px)" srcset="images/Device_hero--desktop@1x.png 1x, images/Device_hero--desktop@2x.png 2x"  width="908" height="521">
+                <img src="images/Device_hero--mobile@1x.png" srcset="images/Device_hero--mobile@2x.png 2x" width="375" height="214" alt="Демонстрация приложения." loading="lazy">
+              </picture>
+            </div>
+            <div class="hero__box">
+              <h2 class="hero__title title title--lg">Земледелие<br>на основе данных</h2>
+              <p class="hero__discription">Цифровой помощник агронома и руководителя сельскохозяйственного предприятия. Вся информация о полях всегда под рукой</p>
+              <div class="hero__price">
+                <span class="hero__price-big title title--lg">от 8 000₽</span>
+                <span class="hero__price-small">/мес</span>
+              </div>
+              <div class="hero__buttons-wrp">
+                <a class="hero__button button button--primary" href="#main-form">Попробовать бесплатно</a>
+                <a class="hero__button hero__button--icon button link" href="#startwork">
+                  <span>Как начать работу</span>
+                  <div class="hero__icon-inner">
+                    <svg width="18" height="18" aria-hidden="true" focusable="false">
+                      <use href="icons/stack.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards swiper" id="cards">
+        <h2 class="cards__title visually-hidden">Карточки преимуществ</h2>
+        <div class="cards-wrapper swiper-wrapper">
+          <div class="cards__item swiper-slide">
+              <div class="cards__item-price">+15%</div>
+              <div class="cards__item-text">Прирост урожайности</div>
+          </div>
+          <div class="cards__item swiper-slide">
+            <div class="cards__item-price">x2</div>
+            <div class="cards__item-text">Общая производительность<br> с/х предприятия</div>
+          </div>
+          <div class="cards__item swiper-slide">
+            <div class="cards__item-price">50%</div>
+            <div class="cards__item-text">Экономия затрат</div>
+          </div>
+          <div class="cards__item swiper-slide">
+              <div class="cards__item-price">+25%</div>
+              <div class="cards__item-text">К рентабельности бизнеса</div>
+          </div>
+        </div>
+      </section>
+      <section class="audience swiper">
+        <h2 class="audience__title title title--md">Для кого предназначен УмножайУрожай?</h2>
+        <div class="audience-wrapper swiper-wrapper">
+          <div class="audience__item swiper-slide">
+              <article class="audience__card target-card">
+                <a class="target-card__item link" href="#">
+                  <div class="target-card__image-inner">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="images/target-card/target_card_1--desktop@1x.webp 1x, images/target-card/target_card_1--desktop@2x.webp 2x" width="390" height="416">
+                      <source type="image/webp" srcset="images/target-card/target_card_1--mobile@1x.webp 1x, images/target-card/target_card_1--mobile@2x.webp 2x"  width="335" height="244">
+                      <source type="image/png" media="(min-width: 1440px)" srcset="images/target-card/target_card_1--desktop@1x.jpg 1x, images/target-card/target_card_1--desktop@2x.jpg 2x"  width="390" height="416">
+                      <img src="images/target-card/target_card_1--mobile@1x.jpg" srcset="images/target-card/target_card_1--mobile@2x.jpg 2x" width="335" height="244" alt="Для малых хозяйств" loading="lazy">
+                    </picture>
+                  </div>
+                  <div class="target-card__box">
+                    <h3 class="target-card__title title">Для малых хозяйств</h3>
+                    <p class="target-card__discription">до 1 600 га</p>
+                  </div>
+                  <div class="target-card__icon">
+                    <svg width="18" height="18" aria-hidden="true" focusable="false">
+                      <use href="icons/stack.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </a>
+              </article>
+          </div>
+          <div class="audience__item swiper-slide">
+            <article class="audience__card target-card">
+              <a class="target-card__item link" href="#">
+                <div class="target-card__image-inner">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/target-card/target_card_2--desktop@1x.webp 1x, images/target-card/target_card_2--desktop@2x.webp 2x" width="390" height="416">
+                    <source type="image/webp" srcset="images/target-card/target_card_2mobile@1x.webp 1x, images/target-card/target_card_2--mobile@2x.webp 2x"  width="335" height="244">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/target-card/target_card_2--desktop@1x.jpg 1x, images/target-card/target_card_2-desktop@2x.jpg 2x"  width="390" height="416">
+                    <img src="images/target-card/target_card_2--mobile@1x.jpg" srcset="images/target-card/target_card_2--mobile@2x.jpg 2x" width="335" height="244" alt="Для малых хозяйств" loading="lazy">
+                  </picture>
+                </div>
+                <div class="target-card__box">
+                  <h3 class="target-card__title title">Для средних хозяйств</h3>
+                  <p class="target-card__discription">до 6 000 га</p>
+                </div>
+                <div class="target-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="audience__item swiper-slide">
+            <article class="audience__card target-card">
+              <a class="target-card__item link" href="#">
+                <div class="target-card__image-inner">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/target-card/target_card_3--desktop@1x.webp 1x, images/target-card/target_card_3--desktop@2x.webp 2x" width="390" height="416">
+                    <source type="image/webp" srcset="images/target-card/target_card_3--mobile@1x.webp 1x, images/target-card/target_card_3--mobile@2x.webp 2x"  width="335" height="244">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/target-card/target_card_3--desktop@1x.jpg 1x, images/target-card/target_card_3--desktop@2x.jpg 2x"  width="390" height="416">
+                    <img src="images/target-card/target_card_3--mobile@1x.jpg" srcset="images/target-card/target_card_3--mobile@2x.jpg 2x" width="335" height="244" alt="Для малых хозяйств" loading="lazy">
+                  </picture>
+                </div>
+                <div class="target-card__box">
+                  <h3 class="target-card__title title">Для крупных хозяйств</h3>
+                  <p class="target-card__discription">до 12 000 га</p>
+                </div>
+                <div class="target-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="audience__item swiper-slide">
+            <article class="audience__card target-card">
+              <a class="target-card__item link" href="#">
+                <div class="target-card__image-inner">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/target-card/target_card_4--desktop@1x.webp 1x, images/target-card/target_card_4--desktop@2x.webp 2x" width="390" height="416">
+                    <source type="image/webp" srcset="images/target-card/target_card_4--mobile@1x.webp 1x, images/target-card/target_card_4--mobile@2x.webp 2x"  width="335" height="244">
+                    <source type="image/png" media="(min-width: 1440px)" srcset="images/target-card/target_card_4--desktop@1x.jpg 1x, images/target-card/target_card_4--desktop@2x.jpg 2x"  width="390" height="416">
+                    <img src="images/target-card/target_card_4--mobile@1x.jpg" srcset="images/target-card/target_card_4--mobile@2x.jpg 2x" width="335" height="244" alt="Для малых хозяйств" loading="lazy">
+                  </picture>
+                </div>
+                <div class="target-card__box">
+                  <h3 class="target-card__title title">Для агрохолдингов</h3>
+                  <p class="target-card__discription">свыше 12 000 га</p>
+                </div>
+                <div class="target-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="possibilities" id="possibilities">
+        <h2 class="possibilities__title title title--md">Наши возможности</h2>
+        <div class="possibilities__wrapper swiper">
+          <div class="possibilities__list swiper-wrapper">
+            <div class="possibilities__item swiper-slide">
+              <div class="possibilities__list-item possibilities__list-item--active" data-number="1">
+                <div class="possibilities__list-item-wrp">Актуальное состояние вашего агропроизводства на одном экране</div>
+              </div>
+            </div>
+            <div class="possibilities__item swiper-slide">
+              <div class="possibilities__list-item" data-number="2">
+                <div class="possibilities__list-item-wrp">Планирование полевых работ</div>
+              </div>
+            </div>
+            <div class="possibilities__item swiper-slide">
+              <div class="possibilities__list-item" data-number="3">
+                <div class="possibilities__list-item-wrp">Мониторинг и прогноз</div>
+              </div>
+            </div>
+            <div class="possibilities__item swiper-slide">
+              <div class="possibilities__list-item" data-number="4">
+                <div class="possibilities__list-item-wrp">Программирование урожайности</div>
+              </div>
+            </div>
+          </div>
+          <div class="possibilities__images">
+            <div class="possibilities__image possibilities__image--active" data-number="1">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/possibilities-1.png" width="838" height="589">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/possibilities-1.png" width="550" height="350">
+                <img src="images/possibilities-1.png" alt="Актуальное состояние вашего агропроизводства на одном экране" width="335" height="226" loading="lazy">
+              </picture>
+            </div>
+            <div class="possibilities__image" data-number="2">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/possibilities-2.png" width="838" height="589">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/possibilities-2.png" width="550" height="350">
+                <img src="images/possibilities-2.png" alt="Актуальное состояние вашего агропроизводства на одном экране" width="335" height="226" loading="lazy">
+              </picture>
+            </div>
+            <div class="possibilities__image" data-number="3">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/possibilities-3.png" width="838" height="589">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/possibilities-3.png" width="550" height="350">
+                <img src="images/possibilities-3.png" alt="Актуальное состояние вашего агропроизводства на одном экране" width="335" height="226" loading="lazy">
+              </picture>
+            </div>
+            <div class="possibilities__image" data-number="4">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/png" srcset="images/possibilities-4.png" width="838" height="589">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/possibilities-4.png" width="550" height="350">
+                <img src="images/possibilities-4.png" alt="Актуальное состояние вашего агропроизводства на одном экране" width="335" height="226" loading="lazy">
+              </picture>
+            </div>
+          </div>
+          <div class="possibilities__mobile-nav">
+            <div class="possibilities__mobile-nav-item" data-number="1"></div>
+            <div class="possibilities__mobile-nav-item" data-number="2"></div>
+            <div class="possibilities__mobile-nav-item" data-number="3"></div>
+            <div class="possibilities__mobile-nav-item" data-number="4"></div>
+          </div>
+        </div>
+      </section>
+      <section class="main-description" id="main-description">
+        <div class="container">
+          <div class="main-description__wrapper">
+            <h2 class="main-description__title title title--lg">Основные модули агроплатформы</h2>
+            <ul class="main-description__list list">
+              <li class="main-description__item main-description__item--icon main-description__item--map">
+                <h3 class="main-description__item-title title">Цифровая карта полей</h3>
+                <p class="main-description__text">Создайте цифровую карту хозяйства — укажите границы полей вручную или с помощью импорта</p>
+              </li>
+              <li class="main-description__item main-description__item--icon main-description__item--weather">
+                <h3 class="main-description__item-title title">История<br> и прогноз погоды</h3>
+                <p class="main-description__text">Используйте исторические данные о климате и актуальные данные о погоде на местности с точностью до конкретного поля</p>
+              </li>
+              <li class="main-description__item main-description__item--icon main-description__item--season">
+                <h3 class="main-description__item-title title">Планирование сезона</h3>
+                <p class="main-description__text">Формируйте технологические карты, привязывайте ко всем операциям ресурсы (технику, персонал, семена, удобрения с СЗР)</p>
+              </li>
+              <li class="main-description__item main-description__item--icon main-description__item--track">
+                <h3 class="main-description__item-title title">Люди<br> и техника</h3>
+                <p class="main-description__text">Добавляйте технику и оборудование своего предприятия, ведите учет персонала</p>
+              </li>
+              <li class="main-description__item main-description__item--icon main-description__item--note">
+                <h3 class="main-description__item-title title">Справочник культур</h3>
+                <p class="main-description__text">Справочники по всем культурам, удобрениям, оборудованию и технике, которые используются в с/х</p>
+              </li>
+              <li class="main-description__item main-description__item--icon main-description__item--update">
+                <h3 class="main-description__item-title title">Журнал севооборота</h3>
+                <p class="main-description__text">Используйте рекомендации по севообороту и его историю для эффективного землепользования</p>
+              </li>
+            </ul>
+            <h2 class="main-description__title title title--md">Технология точного земледелия от Умножай Урожай</h2>
+            <div class="main-description__block-inner">
+              <div class="main-description__text-wrp">
+                <p class="main-description__text">
+                  Разные участки земли, даже в рамках одного поля неоднородны по своим характеристикам, а уникальные алгоритмы, используемые в агроплатформе Умножай Урожай, позволяют определять и учитывать особенности каждого участка земли при планировании работ.
+                </p>
+                <p class="main-description__text">
+                  Благодаря этому Вы и Ваше производство избежите ненужных затрат, можете более эффективно расходовать семена, удобрения и пестициды, а также повысить урожайность. Вот лишь некоторые инструменты, при помощи которых достигается парадигма точного земледелия.
+                </p>
+                <a class="main-description__button button button--primary" href="#main-form">Попробовать бесплатно</a>
+              </div>
+              <ul class="main-description__technologies-list list">
+                <li class="main-description__technologies-item">
+                  <div class="main-description__technologies-text-wrp">
+                    <div class="main-description__technologies-text"><span>Программирование продуктивности</span></div>
+                    <div class="main-description__technologies-toggle">
+                      <svg width="35" height="35" aria-hidden="true" focusable="false">
+                        <use href="icons/stack.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="main-description__technologies-item-list list">
+                    <li class="main-description__technologies-item-text">Алгоритмический расчет потенциально возможной продуктивности на конкретном поле</li>
+                    <li class="main-description__technologies-item-text">Автоматизированный подбор технологии получения расчитанной продуктивности</li>
+                  </ul>
+                </li>
+                <li class="main-description__technologies-item">
+                  <div class="main-description__technologies-text-wrp">
+                    <div class="main-description__technologies-text">Индекс вегетации и рейтинг полей</div>
+                    <div class="main-description__technologies-toggle">
+                      <svg width="35" height="35" aria-hidden="true" focusable="false">
+                        <use href="icons/stack.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="main-description__technologies-item-list list">
+                    <li class="main-description__technologies-item-text">Алгоритмический расчет потенциально возможной продуктивности на конкретном поле</li>
+                    <li class="main-description__technologies-item-text">Автоматизированный подбор технологии получения расчитанной продуктивности</li>
+                  </ul>
+                </li>
+                <li class="main-description__technologies-item">
+                  <div class="main-description__technologies-text-wrp">
+                    <div class="main-description__technologies-text"><span>Прогноз фаз вегетации</span></div>
+                    <div class="main-description__technologies-toggle">
+                      <svg width="35" height="35" aria-hidden="true" focusable="false">
+                        <use href="icons/stack.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="main-description__technologies-item-list list">
+                    <li class="main-description__technologies-item-text">Алгоритмический расчет потенциально возможной продуктивности на конкретном поле</li>
+                    <li class="main-description__technologies-item-text">Автоматизированный подбор технологии получения расчитанной продуктивности</li>
+                  </ul>
+                </li>
+                <li class="main-description__technologies-item">
+                  <div class="main-description__technologies-text-wrp">
+                    <div class="main-description__technologies-text"><span>Карты для дифференцированного внесения удобрений</span></div>
+                    <div class="main-description__technologies-toggle">
+                      <svg width="35" height="35" aria-hidden="true" focusable="false">
+                        <use href="icons/stack.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="main-description__technologies-item-list list">
+                    <li class="main-description__technologies-item-text">Алгоритмический расчет потенциально возможной продуктивности на конкретном поле</li>
+                    <li class="main-description__technologies-item-text">Автоматизированный подбор технологии получения расчитанной продуктивности</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tariff swiper" id="tariff">
+        <h2 class="tariff__title title title--md">Наши тарифы</h2>
+        <div class="tariff__wrapper swiper-wrapper">
+          <div class="tariff__item swiper-slide">
+            <article class="tariff__card tariff-card">
+              <div class="tariff-card__inner">
+                <p class="tariff-card__item-quantity">до 1 600 га</p>
+                <h3 class="tariff-card__item-title title">Для малых хозяйств</h3>
+                <p class="tariff-card__item-description">Услуги агроконсалтинга — комплексное сопровождение агропроизводства на всех этапах — рассчитывается в индивидуальном порядке.</p>
+                <div class="tariff-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="tariff-card__price">
+                <div class="tariff-card__price-wrp">
+                  <span class="tariff-card__price-count">8 000₽</span>
+                  <span class="tariff-card__price-month">/ мес</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="tariff__item swiper-slide">
+            <article class="tariff__card tariff-card">
+              <div class="tariff-card__inner">
+                <p class="tariff-card__item-quantity">до 6 000 га</p>
+                <h3 class="tariff-card__item-title title">Для средних хозяйств</h3>
+                <p class="tariff-card__item-description">Услуги агроконсалтинга — комплексное сопровождение агропроизводства на всех этапах — рассчитывается в индивидуальном порядке.</p>
+                <div class="tariff-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="tariff-card__price">
+                <div class="tariff-card__price-wrp">
+                  <span class="tariff-card__price-count">20 000₽</span>
+                  <span class="tariff-card__price-month">/ мес</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="tariff__item swiper-slide">
+            <article class="tariff__card tariff-card">
+              <div class="tariff-card__inner">
+                <p class="tariff-card__item-quantity">до 12 000 га</p>
+                <h3 class="tariff-card__item-title title">Для крупных хозяйств</h3>
+                <p class="tariff-card__item-description">Услуги агроконсалтинга — комплексное сопровождение агропроизводства на всех этапах — рассчитывается в индивидуальном порядке.</p>
+                <div class="tariff-card__icon">
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="icons/stack.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="tariff-card__price">
+                <div class="tariff-card__price-wrp">
+                  <span class="tariff-card__price-count">35 000₽</span>
+                  <span class="tariff-card__price-month">/ мес</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="startwork" id="startwork">
+        <h2 class="startwork__title title title--md">5 простых шагов, как начать работу в агроплатформе</h2>
+        <ul class="startwork__list list">
+          <li class="startwork__item">
+            <div class="startwork__text-wrp">
+              <div class="startwork__text">
+                <h3 class="startwork__item-title title">Регистрация</h3>
+                <p class="startwork__item-disc">Зарегистрирутесь и создайте ваше первое поле, просто указав его границы на карте.</p>
+              </div>
+            </div>
+          </li>
+          <li class="startwork__item">
+            <div class="startwork__text-wrp">
+              <div class="startwork__text">
+                <h3 class="startwork__item-title title">Заполните данные</h3>
+                <p class="startwork__item-disc">Заполните данные агрохимического и агрофизического анализа почвы.</p>
+              </div>
+            </div>
+          </li>
+          <li class="startwork__item">
+            <div class="startwork__text-wrp">
+              <div class="startwork__text">
+                <h3 class="startwork__item-title title">Создайте севооборот</h3>
+                <p class="startwork__item-disc">Создайте севооборот, назначьте его на поле и выберите сорт.</p>
+              </div>
+            </div>
+          </li>
+          <li class="startwork__item">
+            <div class="startwork__text-wrp">
+              <div class="startwork__text">
+                <h3 class="startwork__item-title title">Добавьте своё оборудование</h3>
+                <p class="startwork__item-disc">Добавьте технику, оборудование и стационарные объекты для оптимизации работ и транспортно-логистических процессов.</p>
+              </div>
+            </div>
+          </li>
+          <li class="startwork__item last-item">
+            <div class="startwork__text-wrp">
+              <div class="startwork__text">
+                <h3 class="startwork__item-title title">Добавьте персонал</h3>
+                <p class="startwork__item-disc">Нанимайте на работу, планируйте отпуска, привязывайте к технике, оборудованию и необходимым работам.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="main-form" id="main-form">
+        <div class="container">
+          <div class="main-form__wrapper">
+            <h2 class="main-form__title title title--md">Рассчитать подписку для вас</h2>
+            <form class="main-form__form application-form" action="#">
+              <div class="application-form__text-input-inner">
+                <div class="application-form__text-input-wrapper pristine-valide">
+                  <input class="application-form__text-input" type="text" placeholder="Имя" name="name" data-pristine-required-message="Обязательное поле для заполнения" required>
+                </div>
+                <div class="application-form__text-input-wrapper pristine-valide">
+                  <input class="application-form__text-input" type="text" placeholder="E-mail" id="email" name="email" data-pristine-required-message="Обязательное поле для заполнения" required>
+                </div>
+                <div class="application-form__text-input-wrapper pristine-valide">
+                  <input class="application-form__text-input" type="tel" placeholder="Телефон" id="phone" name="phone" data-pristine-required-message="Обязательное поле для заполнения" required>
+                </div>
+              </div>
+              <label class="application-form__text-label" >
+                <span>Какая площадь вашей агроплатформы?</span>
+                <input class="application-form__text-input" type="text" placeholder="Площадь" name="square">
+              </label>
+              <label class="application-form__text-label" >
+                <span>Где находится ваша агроплатформа?</span>
+                <select class="application-form__text-input application-form__select" name="region">
+                  <option value="Spb">Санкт-Петербург</option>
+                  <option value="Moscw">Москва</option>
+                  <option value="Omsk">Омск</option>
+                </select>
+              </label>
+              <div class="application-form__privacy-policy">
+                <label class="application-form__privacy-policy-label pristine-valide">
+                  <input class="application-form__privacy-policy-checkbox visually-hidden" name="privacy-policy" type="checkbox" id="privacy-policy">
+                  <span class="application-form__control-mark"></span>
+                  <span>Я согласен с <a class="application-form__privacy-policy-link link" href="#">политикой конфиденциальности</a></span>
+                </label>
+              </div>
+              <button class="application-form__submit-button button" type="submit">Отправить заявку</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/pristinejs@1.1.0/dist/pristine.min.js" defer></script>
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>

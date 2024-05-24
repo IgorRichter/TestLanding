@@ -1,0 +1,144 @@
+.application-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+
+  @media (min-width: $desktop-width) {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.application-form__text-input-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 30px 0 20px;
+}
+
+.application-form__text-input {
+  color: $basic-white;
+  border: 0;
+  width: 100%;
+  background-color: rgba($text-color, 0.15);
+  padding: 17px;
+  border-radius: 53px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 16px;
+
+  &::placeholder {
+    color: $basic-white;
+    opacity: 0.8;
+  }
+   
+  &:hover {
+    outline: 1px solid $basic-white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-white;
+  }
+}
+
+.application-form__text-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  & span {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+.application-form__select {
+
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../icons/stack.svg#select-arrow");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.application-form__privacy-policy {
+  margin-bottom: 30px;
+  width: fit-content;
+}
+
+.application-form__privacy-policy-label {
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  padding: 4px 0 4px 35px;
+}
+
+.application-form__privacy-policy-link {
+  color: $basic-white;
+  text-decoration: underline;
+  text-decoration-color: $basic-white;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+}
+
+.application-form__control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $transparent;
+  border: 1px solid $basic-white;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($text-color, 0.15);
+    border: 0;
+
+    @include check-mark-background;
+  }
+}
+
+.application-form__privacy-policy-checkbox {
+  &[type="checkbox"]:checked + .application-form__control-mark {
+    @include check-mark-background;
+    border: 1px solid $basic-white;
+  }
+
+  &[type="checkbox"]:focus-visible + .application-form__control-mark {
+    outline: 1px solid $basic-white;
+  }
+}
+
+.application-form__submit-button {
+  padding: 15px 0;
+  background-color: $basic-black;
+  color: $basic-white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 46px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $basic-white;
+    color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 290px;
+  }
+}
+

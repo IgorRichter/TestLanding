@@ -1,0 +1,131 @@
+.hero {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin-bottom: 107px;
+    overflow: hidden;
+  }
+}
+
+.hero__image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.hero__inner {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.hero__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $text-color;
+  margin-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    justify-content: unset;
+    order: -1;
+    width: 512px;
+    flex-shrink: 0;
+    margin-right: 25px;
+  }
+}
+
+.hero__title {
+  line-height: 115%;
+  margin-bottom: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
+    margin-bottom: 31px;
+  }
+}
+
+.hero__discription {
+  line-height: 155%;
+  margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    width: 80%;
+    margin-bottom: 62px;
+  }
+}
+
+.hero__price {
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+    line-height: 36px;
+  }
+}
+
+.hero__price-small {
+  opacity: 0.34;
+
+  @media (min-width: $desktop-width) {
+    font-size: 29px;
+  }
+}
+
+.hero__buttons-wrp {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: unset;
+    gap: 38px;
+  }
+}
+
+.hero__icon-inner {
+  border: 1px solid $primary-color;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__button {
+  &--icon {
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus-visible {
+      & span {
+        text-decoration: underline;
+        text-decoration-color: $text-color;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 7px;
+      }
+
+      & svg {
+        color: $basic-white;
+      }
+
+      & .hero__icon-inner {
+        background-color: $primary-color;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+}

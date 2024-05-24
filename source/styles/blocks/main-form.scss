@@ -1,0 +1,31 @@
+.main-form {
+  background-color: $card-color;
+  color: $basic-white;
+  padding: 50px 0;
+  display: flex;
+
+  @media (min-width: $desktop-width) {
+    padding: 86px 125px 105px;
+    background-color: $primary-color;
+
+    & .container {
+      padding: 0;
+    }
+  }
+}
+
+.main-form__title {
+  line-height: 36px;
+
+  @media (min-width: $desktop-width) {
+    line-height: 52px;
+  }
+}
+
+.main-form__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 150px;
+  }
+}

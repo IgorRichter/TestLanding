@@ -1,0 +1,140 @@
+.startwork {
+  padding: 50px 20px;
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.startwork__title {
+  line-height: 36px;
+  margin-bottom: 50px;
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    line-height: 52px;
+    width: 60%;
+    margin-bottom: 120px;
+  }
+}
+
+.startwork__list {
+  padding-left: 34px;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.startwork__item {
+  position: relative;
+  counter-increment: list-item;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: left;
+  padding-bottom: 116px;
+
+  &::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    left: -34px;
+    top: 10px;
+    bottom: -10px;
+    width: 1px;
+    background-image: linear-gradient(to bottom, $text-color 50%, transparent 50%);
+    background-size: 1px 10px;
+    background-repeat: repeat-y;
+
+    @media (min-width: $desktop-width) {
+      left: calc(50% - 50px);
+      margin: 0 50px;
+    }
+  }
+
+  &:last-child::before {
+    content: " ";
+    display: none;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 6px;
+    left: -34px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: $basic-black;
+    border-radius: 50%;
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 32px;
+
+    &:nth-child(even) {
+      padding-left: 50%;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 50%;
+      padding-left: 10%;
+    }
+  }
+}
+
+.startwork__text-wrp {
+  display: flex;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+  &::before {
+    content: "0" counter(list-item);
+    width: 37px;
+    color: $card-color;
+    margin-right: 15px;
+
+    @media (min-width: $desktop-width) {
+      margin-left: 50px;
+      color: $primary-color;
+    }
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 50px;
+  }
+}
+
+.startwork__item-title {
+  margin-bottom: 10px;
+}
+
+.startwork__item-disc {
+  font-size: 16px;
+  color: $text-color-2;
+  width: 96%;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    line-height: 145%;
+  }
+}

@@ -1,0 +1,7 @@
+.main-index {
+  margin-top: 90px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 116px;
+  }
+}
